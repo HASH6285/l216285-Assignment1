@@ -1,0 +1,21 @@
+import pandas
+import matplotlib.pyplot
+import numpy
+print(pd.loc[pd['Student name']=='James Walker'])
+phy=pd[pd['Exam name']=='Physics']['Marks'].mean()
+print("physics",phy)
+chem=pd[pd['Exam name']=='Chemistry']['Marks'].mean()
+print("chemistry",chem)
+bio=pd[pd['Exam name']=='Biology']['Marks'].mean()
+print("biology",bio)
+philo=pd[pd['Exam name']=='Philosophy']['Marks'].mean()
+print("philosophy",philo)
+math=pd[pd['Exam name']=='Mathematics']['Marks'].mean()
+print("Mathematics",math)
+socio=pd[pd['Exam name']=='Sociology']['Marks'].mean()
+print("Sociology",socio)
+x=np.array(["mathematics","physics","chemistry","biology","philosophy","sociology","total"])
+y=np.array([math,phy,chem,bio,philo,socio,100])
+plt.bar(x,y)
+plt.title("Average marks")
+plt.show()

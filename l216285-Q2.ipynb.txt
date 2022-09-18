@@ -1,0 +1,16 @@
+import pandas
+import matplotlib.pyplot
+import numpy
+np=numpy
+plt=matplotlib.pyplot
+df=pandas
+pd=df.read_csv("StudentMarkSheet.csv")
+print(pd.shape)
+print(pd.info())
+print("the number of rows are :")
+x=len(pd.index)
+print(x)
+y=pd.dropna()
+z=len(y.index)
+print("the number of rows after dropping")
+print(z)
